@@ -1,8 +1,9 @@
- function tableupdate(event){
+let count =0;
+function tableupdate(event){
     event.preventDefault() 
+ count++
 
   
-   
         const fname=document.getElementById("fname").value;
         const lname=document.getElementById("lname").value;
         const address=document.getElementById("address").value;
@@ -28,7 +29,7 @@
         const telement=document.getElementById('table')
         const row = telement.insertRow();
         let ss=row.insertCell();
-        ss.innerText=1;
+        ss.innerText=count;
 
         let ffname=row.insertCell();
         ffname.innerText=fname;
